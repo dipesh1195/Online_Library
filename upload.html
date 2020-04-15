@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<title>Online Library</title>
+</head>
+<body style="background: black url(img1.gif) repeat-x;color: white;">
+<div style="height: 158px;width:1200px ;font-weight: bold;letter-spacing: 1px;font-family: courier new;">
+	<h1 style="margin: 0 auto;margin-top: 25px;margin-left: 25%;">Online Library </h1>
+	<h2 style="letter-spacing: -1px;margin: 0 auto;margin-left: 25%;">A book store for everyone</h2>
+	<div><ul style="float: right;list-style: none;font-weight: bold; padding: 20px;margin-top: 60px;font-size: 1.1em">
+		<li style="display: inline;text-decoration: none;  border: 1px solid #1E1010;background: #FEEAB7 url(images/img2.gif) repeat-x left bottom;border-right-color: #7A6D6D;border-bottom-color: #7A6D6D;color: #FFFFFF;font-weight: bold;"><a href="mainpage.html"> Home </a></li>
+		<li style="display: inline;font-weight: bold;margin-left: 10px;display: inline;border: 1px solid #1E1010;background: #FEEAB7 url(images/img2.gif) repeat-x left bottom;border-right-color: #7A6D6D;border-bottom-color: #7A6D6D;color: #FFFFFF;font-weight: bold;"><a href="displaydata.php">Books</a></li>
+		<li style="display: inline;font-weight: bold;margin-left: 10px;display: inline;border: 1px solid #1E1010;background: #FEEAB7 url(images/img2.gif) repeat-x left bottom;border-right-color: #7A6D6D;border-bottom-color: #7A6D6D;color: #FFFFFF;font-weight: bold;"><a href="syllabus.html">Syllabus</a></li>
+		<li style="display: inline;font-weight: bold;margin-left: 10px;display: inline;border: 1px solid #1E1010;background: #FEEAB7 url(images/img2.gif) repeat-x left bottom;border-right-color: #7A6D6D;border-bottom-color: #7A6D6D;color: #FFFFFF;font-weight: bold;"><a href="">Query</a>/</li>
+		
+	</ul></div>
+</div>
+<div style="background-image: url(library.jpg);background-repeat: no-repeat;margin-left: 16%;margin-right: 16%;height: 870px;color: black;font-family: courier new;">
+	<div class="form-style-6">
+			<h1>E-Library Book Input Portal</h1>
+				<form method="POST" action="connection.php" enctype="multipart/form-data" onsubmit="return validate(this)">
+					<input type="text" id="name" name="bookname" placeholder="Book Name*" required/>
+					<textarea cols="25" rows="4" name="bookdesc" placeholder="Book Description*" required></textarea>
+					<input type="text" id="password" name="bookauthor" placeholder="Book Author*"/ required>
+					<select name="booklang" required>
+						  <option selected disabled>Select Book Language*</option>
+						  <option value="English">English</option>
+						  <option value="Hindi">Hindi</option>
+						  <option value="German">German</option>
+						  <option value="French">French</option>
+						  <option value="Other">Other Language</option>
+					</select>
+					<div style="padding-bottom: 6px"><label>Select Book* (Only Pdf, Doc & Docx files are allowed)</label></div>
+					<input type="file" name="bookfile" id="bookfile" required/>
+					<input type="text" id="name" name="uploadername" placeholder="Uploaders Name*" required/>
+					<input type="email" id="name" name="uploaderemail" placeholder="Uploaders Email*" required/>
+					<select name="bookcategory" placeholder="Book Category*" required>
+						  <option selected disabled>Select Book Category*</option>
+						  <option value="CSE">CSE</option>
+						  <option value="CIVIL">CIVIL</option>
+						  <option value="MECHANICAL">MECHANICAL</option>
+						  <option value="BCA">BCA</option>
+						  <option value="Other">Other</option>
+					</select>
+					<input type="submit" id="submit" name="submit">
+			</form>
+		</div>
+ <script>
+    function validate() {
+    var val = document.getElementById('bookfile').value.toLowerCase();
+    var regex = new RegExp("(.*?)\.(docx|doc|pdf)$");
+        if(!(regex.test(val))) {
+            document.getElementById('bookfile').value = '';
+            alert('Please select correct file format.');
+            return false;   
+        }
+		return true;
+		}
+</script>
+
+</div>
+
+</body>
+</html>

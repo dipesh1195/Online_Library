@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<title>Online Library</title>
+</head>
+<body style="background: black url(img1.gif) repeat-x;color: white;">
+<div style="height: 158px;font-weight: bold;letter-spacing: 1px;font-family: courier new;">
+	<h1 style="margin: 0 auto;margin-top: 25px;margin-left: 25%;">Online Library </h1>
+	<h2 style="letter-spacing: -1px;margin: 0 auto;margin-left: 25%;">A book store for everyone</h2>
+
+</div>
+  <div width="30%" style="float:left; margin-left:20px;">
+	<ul style="list-style: none;font-weight: bold;layout:vertical;margin-top: 60px;font-size: 1.1em;">
+	<button type="button" name="button" class="navbar"><a href="mainpage.html"> Home </a></button><br>
+	<button type="button" class="navbar"><a href="displaydata.php">Books</a></button><br>
+	<button type="button" class="navbar"><a href="syllabus.html">Syllabus</a></button><br>
+	<button type="button" class ="navbar"><a href="query.php">Query</a></button><br>
+	<button type="button" class ="navbar"><a href="">Info</a></button><br>
+
+</ul></div>
+<div style="background-image: url(library.jpg);background-repeat: no-repeat;margin-left: 16%;margin-right: 16%; margin-top: 2%; height: 800px;color: black;font-family: courier new;">
+	<form align="center" action="search.php" method="post">
+	    <input style="margin-left:15% ;margin-top:3%; border-radius:30px;padding:3px; height:45px;width:300px;" type="text" name="search"  placeholder="Search Books">
+	    <input style="margin-left:5px; border-radius:30px;padding:3px;height:45px;width:100px;" type="submit" name="Search" >
+	</form>
+				 <h2 style="margin-left: 30%;color: white;">Click Here to upload Books:</h2>
+
+			<button style="margin-left: 40%;font-size: 30px;" onclick="window.location.href = 'upload.html';">Upload Books</button>
+
+ <script>
+    function validate() {
+		var val = document.getElementById('bookfile').value.toLowerCase();
+		var regex = new RegExp("(.*?)\.(docx|doc|pdf)$");
+		  if(!(regex.test(val))) {
+		      document.getElementById('bookfile').value = '';
+		      alert('Please select correct file format.');
+		      return false;
+		  }
+		return true;
+		}
+		</script>
+
+		</div>
+
+</body>
+</html>
