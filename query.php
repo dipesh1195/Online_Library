@@ -12,7 +12,7 @@
 		<li style="display: inline;text-decoration: none;  border: 1px solid #1E1010;background: #FEEAB7 url(images/img2.gif) repeat-x left bottom;border-right-color: #7A6D6D;border-bottom-color: #7A6D6D;color: #FFFFFF;font-weight: bold;"><a href="mainpage.html"> Home </a></li>
 		<li style="display: inline;font-weight: bold;margin-left: 10px;display: inline;border: 1px solid #1E1010;background: #FEEAB7 url(images/img2.gif) repeat-x left bottom;border-right-color: #7A6D6D;border-bottom-color: #7A6D6D;color: #FFFFFF;font-weight: bold;"><a href="displaydata.php">Books</a></li>
 		<li style="display: inline;font-weight: bold;margin-left: 10px;display: inline;border: 1px solid #1E1010;background: #FEEAB7 url(images/img2.gif) repeat-x left bottom;border-right-color: #7A6D6D;border-bottom-color: #7A6D6D;color: #FFFFFF;font-weight: bold;"><a href="syllabus.html">Syllabus</a></li>
-		<li style="display: inline;font-weight: bold;margin-left: 10px;display: inline;border: 1px solid #1E1010;background: #FEEAB7 url(images/img2.gif) repeat-x left bottom;border-right-color: #7A6D6D;border-bottom-color: #7A6D6D;color: #FFFFFF;font-weight: bold;"><a href="query.html">Query</a>/</li>
+		<li style="display: inline;font-weight: bold;margin-left: 10px;display: inline;border: 1px solid #1E1010;background: #FEEAB7 url(images/img2.gif) repeat-x left bottom;border-right-color: #7A6D6D;border-bottom-color: #7A6D6D;color: #FFFFFF;font-weight: bold;"><a href="query.php">Query</a>/</li>
 
 	</ul></div>
 </div>

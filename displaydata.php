@@ -2,21 +2,66 @@
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<title>Online Library</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <meta charset="utf-8">
+	<title>Online Library</title>	
 </head>
-<body style="background: black url(img1.gif) repeat-x;color: white;">
-<div style="height: 158px;width:1200px ;font-weight: bold;letter-spacing: 1px;font-family: courier new;">
-	<h1 style="margin: 0 auto;margin-top: 25px;margin-left: 25%;">Online Library </h1>
-	<h2 style="letter-spacing: -1px;margin: 0 auto;margin-left: 25%;">A book store for everyone</h2>
-	<div><ul style="float: right;list-style: none;font-weight: bold; padding: 20px;margin-top: 60px;font-size: 1.1em">
-		<li style="display: inline;text-decoration: none;  border: 1px solid #1E1010;background: #FEEAB7 url(images/img2.gif) repeat-x left bottom;border-right-color: #7A6D6D;border-bottom-color: #7A6D6D;color: #FFFFFF;font-weight: bold;"><a href="mainpage.html"> Home </a></li>
-		<li style="display: inline;font-weight: bold;margin-left: 10px;display: inline;border: 1px solid #1E1010;background: #FEEAB7 url(images/img2.gif) repeat-x left bottom;border-right-color: #7A6D6D;border-bottom-color: #7A6D6D;color: #FFFFFF;font-weight: bold;"><a href="displaydata.php">Books</a></li>
-		<li style="display: inline;font-weight: bold;margin-left: 10px;display: inline;border: 1px solid #1E1010;background: #FEEAB7 url(images/img2.gif) repeat-x left bottom;border-right-color: #7A6D6D;border-bottom-color: #7A6D6D;color: #FFFFFF;font-weight: bold;"><a href="syllabus.html">Syllabus</a></li>
-		<li style="display: inline;font-weight: bold;margin-left: 10px;display: inline;border: 1px solid #1E1010;background: #FEEAB7 url(images/img2.gif) repeat-x left bottom;border-right-color: #7A6D6D;border-bottom-color: #7A6D6D;color: #FFFFFF;font-weight: bold;"><a href="query.html">Query</a>/</li>
+<body style="background-image: url(images/bg.jpg); background-size:cover;" >
+	<header>
+   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="mainpage.html">Online Library</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item ">
+        <a class="nav-link" href="mainpage.html">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="displaydata.php">Books</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="upload.html">Upload</a>
+      </li>
 
-	</ul></div>
-</div>
-<div  style="background-color: lighter;	 margin-top: 2%; height: 870px;color: orange;font-family: courier new;">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Select Course
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+           <a class="dropdown-item" href="cse.php">CSE</a>
+          <a class="dropdown-item" href="mechanical.php">Mechanical</a>
+          <a class="dropdown-item" href="civil.php">Civil</a>
+          <a class="dropdown-item" href="eee.php">EEE</a>
+          <a class="dropdown-item" href="bca.php">BCA</a>
+          <a class="dropdown-item" href="other.php">Others</a>  
+          <nav class="navbar navbar-light bg-light">
+          </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          MMDU
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+             <a class="dropdown-item" href="https://www.mmumullana.org/">MMDU Official Site</a>
+          <a class="dropdown-item" href="https://www.mmumullana.org/holiday-calendar-2020/#">MMDU Holidays 2020</a>
+          <a class="dropdown-item" href="syllabus.html">Syllabus</a>
+          <nav class="navbar navbar-light bg-light">
+            </div>
+      </li>
+      
+    </ul>
+
+  </div>
+  <form class="form-inline" method="POST" action="search.php">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit" >Search</button>
+  </form>
+</nav>
+</header>
+<div >
+<div class="container">
 
 <?php
 $servername="localhost";
@@ -37,27 +82,25 @@ $result = $conn->query($sql);
 
 ?>
    <h2>Categories</h2>
-		<ul style="font-family: courier new;font-style: bold;">
-			<li><a href="cse.php">CSE</a></li>
-			<li><a href="civil.php">CIVIL</a></li>
-			<li><a href="mechanical.php">MECHANICAL</a></li>
-			<li><a href="eee.php">EEE</a></li>
-			<li><a href="bca.php">BCA/MCA</a></li>
-			<li><a href="other.php">OTHER</a></li>
-		</ul>
-	<div>
-	<h2>Books Available for Free Download</h2>
-		<table width="100%" cellspacing="10%" cellpadding="8" border="5px solid">
-				<div class="header">
-					<th style="color: white;font-style: bold;font-family: courier new;">Book Name</th>
-					<th style="color: white;font-style: bold;font-family: courier new;">Book Description</th>
-					<th style="color: white;font-style: bold;font-family: courier new;">Book Author</th>
-					<th style="color: white;font-style: bold;font-family: courier new;">Book Language</th>
-					<th style="color: white;font-style: bold;font-family: courier new;">Download Link</th>
-					<th style="color: white;font-style: bold;font-family: courier new;">Uploader Name</th>
-					<th style="color: white;font-style: bold;font-family: courier new;">Uploader Email</th>
-					<th style="color: white;font-style: bold;font-family: courier new;">Book Category</th>
-				</div>
+   <button type="button" class="btn btn-warning" > <a class="btn-a" href="cse.php">CSE</a></button>
+   <button type="button" class="btn btn-warning" > <a id="btn-a" href="civil.php">CIVIL</a></button>
+   <button type="button" class="btn btn-warning" > <a id="btn-a" href="mechanical.php">MECH</a></button>
+   <button type="button" class="btn btn-warning" > <a id="btn-a" href="eee.php">EEE</a></button>
+   <button type="button" class="btn btn-warning" > <a id="btn-a" href="bca.php">BCA/MCA</a></button>
+   <button type="button" class="btn btn-warning" > <a id="btn-a" href="other.php">OTHER</a></button>
+
+	<div class="divtag">
+	<h2>Book Console</h2>
+		<table class="table table-hover"  border="5px solid green">
+					<th>Book Name</th>
+					<th>Book Description</th>
+					<th>Book Author</th>
+					<th>Book Language</th>
+					<th>Download Link</th>
+					<th>Uploader Name</th>
+					<th>Uploader Email</th>
+					<th>Book Category</th>
+		
 					<tr>
 						<?php
 							while($row = $result->fetch_assoc()) {
@@ -72,14 +115,17 @@ $result = $conn->query($sql);
 							echo "<td>".$row['bookcategory']."</td>";
 							echo "</tr>";
 							}
-						?>
+						?></tr>
 		</table>
 	</div>
 
 
 
-
 </div>
-
+</footer>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</div>
 </body>
 </html>

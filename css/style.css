@@ -1,29 +1,25 @@
-
-      li a{
+ li a{
           display: inline-block;
           color: #298CEC;
-      	font-weight: bold;
           text-align: center;
           text-decoration: none;
       } li a:hover{
-          background-color: #6CC417;
+          /*background-color: #6CC417;*/
+          text-decoration: none;
       }
        button a{
             display: inline-block;
             color: #298CEC;
-        	  font-weight: bold;
-
-            text-align: center;
+           text-align: center;
             text-decoration: none;
         }
 
       button a:hover{
           background-color: #6CC417;
-          font-size: 20px;
-          font-family: cursive;
-          line-height:20px;
+          letter-spacing: 1px;
+          text-decoration: none;
 
-      }
+      }*/
       .navbar{
        border-radius:10px;
        text-decoration: none;
@@ -122,3 +118,26 @@
         weight:30px;
 
       }
+     h2{
+      background: #43D1AF;
+       padding: 8px ;
+       font-size: 15px;
+       font-weight: 300;
+       color: #fff;
+       border-radius: 5%
+       margin-top:10px;
+       margin-bottom: 10px;
+
+     }
+     .header{
+      background: red;
+     }
+    .divtag{
+      margin-top: 10px;
+    }
+    table th{
+      background-color:#43D1AF ;
+      padding: 10px;
+    }
+   
+}
